@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TransactionController extends Controller
+{
+    public function create_transaction(Request $request){
+        $data = $request->all();
+        $customer_username = $data['username'];
+        $customer_pass = md5($data['password']);
+    }
+}
